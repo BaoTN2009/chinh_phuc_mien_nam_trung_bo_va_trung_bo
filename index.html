@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hành trình Việt Nam – Địa lí 12</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<button class="mus" id="mus" aria-label="Bật/tắt nhạc">🎵</button>
+<div class="wrap">
+
+<div id="home" class="card">
+ <div class="hero">🗺️🌿</div>
+ <h1>Hành trình Việt Nam</h1>
+ <p class="sub">Địa lí 12 · Bài 3: Sự phân hoá đa dạng của thiên nhiên</p>
+ <div class="tabs"><button class="tab on" data-t="play">🎮 Trắc nghiệm kiến thức</button><button class="tab" data-t="ai">✨ Soạn lại câu hỏi bằng AI</button></div>
+ <div id="tPlay">
+  <label for="nm">Họ và tên của bạn</label>
+  <input id="nm" maxlength="40" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name">
+  <button class="btn" id="start">🚀 Bắt đầu chơi</button>
+  <ul class="rules"><li>15 câu, thứ tự câu và đáp án được xáo trộn mỗi lượt</li><li>Mỗi câu đúng được 10 điểm · tối đa 10 phút</li><li>Đạt từ 70 điểm để nhận 🏅 Giấy chứng nhận của Trường THPT Trần Văn Giàu</li></ul>
+ </div>
+ <div id="tAi" class="hidden">
+  <label for="sel">Chọn câu hỏi gốc</label><select id="sel"></select>
+  <button class="btn alt" id="rew">✨ AI soạn lại câu hỏi</button>
+  <div id="aiOut" class="ai hidden"></div>
+  <button class="btn hidden" id="useAi">✅ Dùng câu này cho lượt chơi tiếp theo</button>
+ </div>
+</div>
+
+<div id="game" class="hidden">
+ <div class="top"><span class="pill" id="cnt">1/15</span><div class="bar"><i id="pb"></i></div><span class="pill" id="tm">⏱ 10:00</span><span class="pill" id="sc">⭐ 0</span></div>
+ <div class="card"><div class="q" id="qt"></div><div id="ops"></div><div id="fb"></div><button class="btn hidden" id="nx">Câu tiếp theo ➜</button></div>
+</div>
+
+<div id="result" class="hidden">
+ <div class="card"><div class="hero" id="rIcon"></div><h2 style="text-align:center" id="rTitle"></h2><div class="big" id="rScore"></div><p class="sub" id="rMsg"></p>
+  <div id="certbox" class="hidden"><div class="cert"><div class="sc">TRƯỜNG THPT TRẦN VĂN GIÀU</div><div style="font-size:40px">🏅</div><h2 style="color:#b8860b;letter-spacing:2px">GIẤY CHỨNG NHẬN</h2><div>Học sinh</div><div class="nm" id="cName"></div><div>đã hoàn thành xuất sắc trò chơi <b>“Sự phân hoá đa dạng của thiên nhiên”</b><br>Địa lí 12 – Bài 3, đạt <b id="cScore"></b> điểm</div><div style="margin-top:14px;font-size:14px" id="cDate"></div><div style="margin-top:8px;font-weight:900">Trường THPT Trần Văn Giàu</div></div><button class="btn alt" onclick="window.print()">🖨️ In / Lưu PDF giấy chứng nhận</button></div>
+  <button class="btn" id="again">🔄 Chơi lại (đề mới)</button></div>
+</div>
+</div>
+
+<script src="script.js"></script></body></html>
